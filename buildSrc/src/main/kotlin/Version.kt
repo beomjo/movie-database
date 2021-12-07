@@ -1,0 +1,4 @@
+const val KOTLIN_VERSION = "1.5.31"
+const val COMPOSE_VERSION = "1.0.5"
+const val LIFECYCLE_VERSION = "2.4.0"
+const val ACTIVITY_FRAGMENT_VERSION = "1.4.0"

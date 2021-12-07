@@ -1,0 +1,16 @@
+build:
+  maxIssues: 0
+
+formatting:
+  NoWildcardImports:
+    active: false
+style:
+  WildcardImport:
+    active: false
+  MagicNumber:
+    active: false
+complexity:
+  TooManyFunctions:
+    active: false
+  LongParameterList:
+    functionThreshold: 10
