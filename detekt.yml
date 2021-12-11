@@ -14,3 +14,6 @@ complexity:
     active: false
   LongParameterList:
     functionThreshold: 10
+naming:
+  FunctionNaming:
+    functionPattern: '([a-zA-Z][a-zA-Z0-9]*)|(`.*`)'
