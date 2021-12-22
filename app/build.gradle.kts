@@ -30,9 +30,9 @@ android {
 }
 
 dependencies {
-    implementation(project(":domain"))
-    implementation(project(":data"))
-    implementation(project(":common"))
+    implementation(projects.domain)
+    implementation(projects.data)
+    implementation(projects.common)
 
     implementation(Dependency.Kotlin.SDK)
     implementation(Dependency.Kotlin.COROUTINE_CORE)
