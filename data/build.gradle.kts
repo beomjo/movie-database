@@ -3,23 +3,8 @@ plugins {
     `kotlin-android`
     `kotlin-kapt`
     `detekt-setting`
+    `android-config`
 }
-
-android {
-    compileSdk = Environment.ANDROID_COMPILE
-
-    defaultConfig {
-        minSdk = Environment.ANDROID_MIN
-        targetSdk = Environment.ANDROID_TARGET
-    }
-
-    testOptions {
-        unitTests.all {
-            it.useJUnitPlatform()
-        }
-    }
-}
-
 
 dependencies {
     implementation(project(":domain"))

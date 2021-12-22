@@ -1,5 +1,6 @@
 plugins {
     `kotlin-dsl`
+    `kotlin-dsl-precompiled-script-plugins`
 }
 
 repositories {
@@ -9,7 +10,7 @@ repositories {
 }
 
 object PluginVersion {
-    const val GRADLE = "7.0.3"
+    const val GRADLE = "7.0.4"
     const val KOTLIN = "1.5.31"
     const val DETEKT = "1.19.0"
     const val HILT = "2.39.1"
