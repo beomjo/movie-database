@@ -3,7 +3,6 @@ plugins {
     `kotlin-android`
     `kotlin-kapt`
     `detekt-setting`
-    id("dagger.hilt.android.plugin")
     `android-config`
 }
 
