@@ -1,9 +1,7 @@
 plugins {
-    `android-library`
-    `kotlin-android`
-    `kotlin-kapt`
     `detekt-setting`
     `android-config`
+    id("dagger.hilt.android.plugin")
 }
 
 dependencies {

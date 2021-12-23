@@ -1,7 +1,4 @@
 plugins {
-    android
-    `kotlin-android`
-    `kotlin-kapt`
     `detekt-setting`
     `android-config`
 }

@@ -1,8 +1,10 @@
 @file:Suppress("UnstableApiUsage")
 
-import com.android.build.gradle.BaseExtension
-
-fun android(configuration: BaseExtension.() -> Unit) = configure(configuration)
+plugins {
+    android
+    `kotlin-android`
+    `kotlin-kapt`
+}
 
 // Common configuration for all Android modules.
 android {
