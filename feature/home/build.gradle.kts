@@ -1,6 +1,7 @@
 plugins {
     `detekt-setting`
     `android-config`
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -15,4 +16,7 @@ android {
 
 dependencies {
     implementation(projects.app)
+
+    implementation(Dependency.Hilt.CORE)
+    kapt(Dependency.Hilt.APT)
 }
