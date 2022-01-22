@@ -38,6 +38,10 @@ fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "activity_
 material = "com.google.android.material:material:1.4.0"
 gson = "com.google.code.gson:gson:2.8.9"
 
+## OkHttp
+okhttp3 = "com.squareup.okhttp3:okhttp:5.0.0-alpha.2"
+okhttp3_connection = "com.squareup.okhttp3:okhttp-urlconnection:4.9.2"
+okhttp3_interceptor = "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2"
 
 dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
 daggerCompiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
