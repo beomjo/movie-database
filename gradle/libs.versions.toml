@@ -1,0 +1,79 @@
+[versions]
+kotlin = "1.5.31"
+coroutine = "1.5.2"
+compose = "1.0.5"
+lifecycle = "2.4.0"
+activity-fragment = "1.4.0"
+hilt = "2.39.1"
+retrofit = "2.9.0"
+mockk = "1.12.1"
+
+
+[libraries]
+kotlin-sdk = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
+kotlin-reflection = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutine" }
+coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutine" }
+
+constraintlayout = "androidx.constraintlayout:constraintlayout:2.1.1"
+appcompat = "androidx.appcompat:appcompat:1.4.0"
+
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose-material = { module = "androidx.compose.material:material", version.ref = "compose" }
+compose-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+compose-activity = { module = "androidx.activity:activity-compose", version.ref = "activity-fragment" }
+compose-navigation = "androidx.navigation:navigation-compose:2.4.0-alpha08"
+
+ktx-core = "androidx.core:core-ktx:1.7.0"
+lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+lifecycle-livedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycle" }
+activity = { module = "androidx.activity:activity-ktx", version.ref = "activity-fragment" }
+fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "activity-fragment" }
+
+material = "com.google.android.material:material:1.4.0"
+gson = "com.google.code.gson:gson:2.8.9"
+
+okhttp3-core = "com.squareup.okhttp3:okhttp:5.0.0-alpha.2"
+okhttp3-connection = "com.squareup.okhttp3:okhttp-urlconnection:4.9.2"
+okhttp3-interceptor = "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2"
+
+retrofit-core = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+
+dagger-hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+dagger-hiltApt = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+
+coroutine-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutine" }
+mockk-test = { module = "io.mockk:mockk", version.ref = "mockk" }
+mockk-agent-jvm = { module = "io.mockk:mockk-agent-jvm", version.ref = "mockk" }
+kotest = "io.kotest:kotest-runner-junit5:5.0.1"
+compose-uitooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+
+## AndroidTest
+test-runner = "androidx.test:runner:1.4.0"
+espresso = "androidx.test.espresso:espresso-core:3.4.0"
+
+[bundles]
+android = [
+    "ktx-core",
+    "lifecycle-viewmodel",
+    "lifecycle-livedata",
+    "activity",
+    "fragment",
+]
+compose = [
+    "compose-ui",
+    "compose-material",
+    "compose-preview",
+    "compose-activity",
+    "compose-navigation",
+]
+retrofit = ["retrofit-core", "retrofit-converter-gson"]
+text = [
+    "coroutine-test",
+    "mockk-test",
+    "mockk-agent-jvm",
+    "kotest",
+    "compose-uitooling"
+]
+androidTest = ["test-runner", "espresso"]
