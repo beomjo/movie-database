@@ -7,21 +7,16 @@ plugins {
 dependencies {
     implementation(projects.domain)
 
-    implementation(Dependency.Kotlin.COROUTINE_CORE)
-    implementation(Dependency.Kotlin.COROUTINE_ANDROID)
+    implementation(libs.bundles.coroutine)
 
-    implementation(Dependency.Hilt.CORE)
-    kapt(Dependency.Hilt.APT)
+    implementation(libs.bundles.google)
+    implementation(libs.bundles.retrofit)
+    implementation(libs.bundles.retrofit)
 
-    implementation(Dependency.Google.GSON)
+    implementation(libs.dagger.hilt)
+    kapt(libs.dagger.hiltApt)
 
-    implementation(Dependency.Retrofit.CORE)
-    implementation(Dependency.Retrofit.CONVERT_GSON)
+    implementation(libs.bundles.okhttp3)
 
-    implementation(Dependency.OkHttp.CORE)
-    implementation(Dependency.OkHttp.CONNECTION)
-    implementation(Dependency.OkHttp.LOGGING_INTERCEPTOR)
-
-    testImplementation(TestDependency.KOTEST)
-    testImplementation(TestDependency.MOCKK)
+    testImplementation(libs.bundles.test)
 }

@@ -17,6 +17,6 @@ android {
 dependencies {
     implementation(projects.app)
 
-    implementation(Dependency.Hilt.CORE)
-    kapt(Dependency.Hilt.APT)
+    implementation(libs.dagger.hilt)
+    kapt(libs.dagger.hiltApt)
 }

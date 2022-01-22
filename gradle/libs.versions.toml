@@ -49,17 +49,23 @@ mockk-agent-jvm = { module = "io.mockk:mockk-agent-jvm", version.ref = "mockk" }
 kotest = "io.kotest:kotest-runner-junit5:5.0.1"
 compose-uitooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 
-## AndroidTest
 test-runner = "androidx.test:runner:1.4.0"
 espresso = "androidx.test.espresso:espresso-core:3.4.0"
 
+
 [bundles]
 android = [
+    "kotlin-sdk",
     "ktx-core",
+    "appcompat",
     "lifecycle-viewmodel",
     "lifecycle-livedata",
     "activity",
     "fragment",
+]
+coroutine = [
+    "coroutines-core",
+    "coroutines-android",
 ]
 compose = [
     "compose-ui",
@@ -68,12 +74,17 @@ compose = [
     "compose-activity",
     "compose-navigation",
 ]
+google = ["material", "gson"]
 retrofit = ["retrofit-core", "retrofit-converter-gson"]
-text = [
+okhttp3 = [
+    "okhttp3-core",
+    "okhttp3-connection",
+    "okhttp3-interceptor",
+]
+test = [
     "coroutine-test",
     "mockk-test",
     "mockk-agent-jvm",
     "kotest",
-    "compose-uitooling"
 ]
 androidTest = ["test-runner", "espresso"]
