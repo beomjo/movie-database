@@ -19,7 +19,7 @@ android {
         versionCode = 1
         versionName = "1.0.0"
 
-        testInstrumentationRunner = TestDependency.ANDROID_JUNIT_RUNNER
+        testInstrumentationRunner = "AndroidJUnitRunner"
     }
     buildTypes {
         getByName("release") {
