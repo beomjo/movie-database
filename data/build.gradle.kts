@@ -1,4 +1,5 @@
 plugins {
+    id("com.android.library")
     `detekt-setting`
     `android-config`
     id("dagger.hilt.android.plugin")
