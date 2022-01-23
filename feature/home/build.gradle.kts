@@ -1,4 +1,5 @@
 plugins {
+    id("com.android.library")
     `detekt-setting`
     `android-config`
     id("dagger.hilt.android.plugin")
@@ -10,13 +11,13 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = COMPOSE_VERSION
+        kotlinCompilerExtensionVersion = libs.versions.compose.get()
     }
 }
 
 dependencies {
     implementation(projects.app)
 
-    implementation(Dependency.Hilt.CORE)
-    kapt(Dependency.Hilt.APT)
+    implementation(libs.dagger.hilt)
+    kapt(libs.dagger.hiltApt)
 }

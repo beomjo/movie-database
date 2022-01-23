@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 plugins {
     `kotlin-dsl`
     `kotlin-dsl-precompiled-script-plugins`
@@ -9,18 +11,18 @@ repositories {
     gradlePluginPortal()
 }
 
-object PluginVersion {
-    const val GRADLE = "7.0.4"
-    const val KOTLIN = "1.5.31"
-    const val DETEKT = "1.19.0"
-    const val HILT = "2.39.1"
-    const val DEPENDENCY_CHECKER = "0.39.0"
-}
+val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
+val gradleVersion = libs.findVersion("gradle").get().requiredVersion.toString()
+val kotlinVersion = libs.findVersion("kotlin").get().requiredVersion.toString()
+val detektVersion = libs.findVersion("detekt").get().requiredVersion.toString()
+val hiltVersion = libs.findVersion("hilt").get().requiredVersion.toString()
+val dependencyCheckerVersion =
+    libs.findVersion("dependency-checker").get().requiredVersion.toString()
 
 dependencies {
-    implementation("com.android.tools.build:gradle:${PluginVersion.GRADLE}")
-    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:${PluginVersion.KOTLIN}")
-    implementation("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:${PluginVersion.DETEKT}")
-    implementation("com.google.dagger:hilt-android-gradle-plugin:${PluginVersion.HILT}")
-    implementation("com.github.ben-manes:gradle-versions-plugin:${PluginVersion.DEPENDENCY_CHECKER}")
+    implementation("com.android.tools.build:gradle:${gradleVersion}")
+    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
+    implementation("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:${detektVersion}")
+    implementation("com.google.dagger:hilt-android-gradle-plugin:${hiltVersion}")
+    implementation("com.github.ben-manes:gradle-versions-plugin:${dependencyCheckerVersion}")
 }

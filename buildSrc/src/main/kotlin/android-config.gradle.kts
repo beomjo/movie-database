@@ -1,12 +1,14 @@
 @file:Suppress("UnstableApiUsage")
 
+import com.android.build.gradle.BaseExtension
+
 plugins {
-    android
     `kotlin-android`
     `kotlin-kapt`
 }
 
-// Common configuration for all Android modules.
+fun android(configuration: BaseExtension.() -> Unit) = configure(configuration)
+
 android {
     compileSdkVersion(Environment.ANDROID_COMPILE)
     buildToolsVersion = Environment.BUILD_TOOL
@@ -17,7 +19,7 @@ android {
         versionCode = 1
         versionName = "1.0.0"
 
-        testInstrumentationRunner = TestDependency.ANDROID_JUNIT_RUNNER
+        testInstrumentationRunner = "AndroidJUnitRunner"
     }
     buildTypes {
         getByName("release") {
