@@ -2,7 +2,7 @@
 gradle = "7.0.4"
 kotlin = "1.6.10"
 coroutine = "1.6.0"
-compose = "1.0.5"
+compose = "1.1.0-rc01"
 lifecycle = "2.4.0"
 activity-fragment = "1.4.0"
 hilt = "2.40.5"
