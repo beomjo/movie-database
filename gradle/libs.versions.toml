@@ -1,12 +1,12 @@
 [versions]
-kotlin = "1.5.31"
-coroutine = "1.5.2"
+kotlin = "1.6.10"
+coroutine = "1.6.0"
 compose = "1.0.5"
 lifecycle = "2.4.0"
 activity-fragment = "1.4.0"
-hilt = "2.39.1"
+hilt = "2.40.5"
 retrofit = "2.9.0"
-mockk = "1.12.1"
+mockk = "1.12.2"
 
 
 [libraries]
@@ -22,7 +22,7 @@ compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-material = { module = "androidx.compose.material:material", version.ref = "compose" }
 compose-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 compose-activity = { module = "androidx.activity:activity-compose", version.ref = "activity-fragment" }
-compose-navigation = "androidx.navigation:navigation-compose:2.4.0-alpha08"
+compose-navigation = "androidx.navigation:navigation-compose:2.4.0-rc01"
 
 ktx-core = "androidx.core:core-ktx:1.7.0"
 lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
@@ -30,12 +30,12 @@ lifecycle-livedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", ver
 activity = { module = "androidx.activity:activity-ktx", version.ref = "activity-fragment" }
 fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "activity-fragment" }
 
-material = "com.google.android.material:material:1.4.0"
+material = "com.google.android.material:material:1.5.0"
 gson = "com.google.code.gson:gson:2.8.9"
 
-okhttp3-core = "com.squareup.okhttp3:okhttp:5.0.0-alpha.2"
-okhttp3-connection = "com.squareup.okhttp3:okhttp-urlconnection:4.9.2"
-okhttp3-interceptor = "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2"
+okhttp3-core = "com.squareup.okhttp3:okhttp:5.0.0-alpha.3"
+okhttp3-connection = "com.squareup.okhttp3:okhttp-urlconnection:4.9.3"
+okhttp3-interceptor = "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3"
 
 retrofit-core = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 retrofit-converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
@@ -46,7 +46,7 @@ dagger-hiltApt = { module = "com.google.dagger:hilt-android-compiler", version.r
 coroutine-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutine" }
 mockk-test = { module = "io.mockk:mockk", version.ref = "mockk" }
 mockk-agent-jvm = { module = "io.mockk:mockk-agent-jvm", version.ref = "mockk" }
-kotest = "io.kotest:kotest-runner-junit5:5.0.1"
+kotest = "io.kotest:kotest-runner-junit5:5.1.0"
 compose-uitooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 
 test-runner = "androidx.test:runner:1.4.0"
