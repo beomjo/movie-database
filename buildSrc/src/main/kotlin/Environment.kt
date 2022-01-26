@@ -4,4 +4,5 @@ object Environment {
     const val ANDROID_TARGET = 31
     const val ANDROID_MIN = 21
     const val BUILD_TOOL = "30.0.2"
+    const val REST_KEY = "REST_KEY"
 }
