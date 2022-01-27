@@ -21,9 +21,7 @@ internal object DataModule {
         return RetrofitAdapter.getInstance(Urls.BASE_URL, apiKey)
     }
 
-
     @Module
     @InstallIn(SingletonComponent::class)
-    abstract class DataBindModule {
-    }
+    abstract class DataBindModule
 }

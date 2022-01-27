@@ -75,7 +75,7 @@ internal object RetrofitAdapter {
 
     private fun getRegion(): String? = try {
         Locale.getDefault().country.substring(0, 2)
-    } catch (t: Throwable) {
+    } catch (throwable: Throwable) {
         null
     }
 }
