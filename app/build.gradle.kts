@@ -1,3 +1,6 @@
+import Environment.REST_KEY
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
     id("com.android.application")
     `detekt-setting`
@@ -5,10 +8,14 @@ plugins {
     id("dagger.hilt.android.plugin")
 }
 
+val restKey: String? = gradleLocalProperties(rootDir).getProperty(REST_KEY)
+
 android {
     defaultConfig {
         applicationId = Environment.APPLICATION_ID
         vectorDrawables.useSupportLibrary = true
+
+        buildConfigField("String", REST_KEY, "\"$restKey\"")
     }
 
     buildFeatures {
