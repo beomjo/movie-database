@@ -16,7 +16,10 @@ android {
 }
 
 dependencies {
-    implementation(projects.app)
+    implementation(projects.domain)
+    implementation(projects.data)
+    implementation(projects.common)
+    implementation(projects.navigation)
 
     implementation(libs.dagger.hilt)
     kapt(libs.dagger.hiltApt)

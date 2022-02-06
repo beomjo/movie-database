@@ -32,9 +32,10 @@ android {
 }
 
 dependencies {
-    implementation(projects.domain)
-    implementation(projects.data)
-    implementation(projects.common)
+    implementation(projects.feature.home)
+    implementation(projects.feature.search)
+    implementation(projects.feature.people)
+    implementation(projects.feature.mypage)
 
     implementation(libs.bundles.android)
     implementation(libs.bundles.coroutine)
