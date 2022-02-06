@@ -1,4 +1,4 @@
-package io.beomjo.moviedb
+package io.beomjo.moviedb.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -14,25 +14,17 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MyApplicationTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
-                }
-            }
+            MovieApp()
         }
     }
 }
 
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
+
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     MyApplicationTheme {
-        Greeting("Android")
+        MovieApp()
     }
 }
