@@ -1,8 +1,19 @@
+import Environment.REST_KEY
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
     id("com.android.library")
     `detekt-setting`
     `android-config`
     id("dagger.hilt.android.plugin")
+}
+val restKey: String? = gradleLocalProperties(rootDir)
+    .getProperty(REST_KEY)
+
+android {
+    defaultConfig {
+        buildConfigField("String", REST_KEY, "\"$restKey\"")
+    }
 }
 
 dependencies {

@@ -8,14 +8,11 @@ plugins {
     id("dagger.hilt.android.plugin")
 }
 
-val restKey: String? = gradleLocalProperties(rootDir).getProperty(REST_KEY)
 
 android {
     defaultConfig {
         applicationId = Environment.APPLICATION_ID
         vectorDrawables.useSupportLibrary = true
-
-        buildConfigField("String", REST_KEY, "\"$restKey\"")
     }
 
     buildFeatures {
@@ -32,6 +29,7 @@ android {
 }
 
 dependencies {
+    implementation(projects.navigation)
     implementation(projects.feature.home)
     implementation(projects.feature.search)
     implementation(projects.feature.people)
@@ -39,8 +37,6 @@ dependencies {
 
     implementation(libs.bundles.compose)
     debugImplementation(libs.compose.uitooling)
-
-    implementation(libs.bundles.google)
 
     implementation(libs.dagger.hilt)
     kapt(libs.dagger.hiltApt)
