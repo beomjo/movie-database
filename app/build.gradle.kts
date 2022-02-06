@@ -37,8 +37,6 @@ dependencies {
     implementation(projects.feature.people)
     implementation(projects.feature.mypage)
 
-    implementation(libs.bundles.android)
-    implementation(libs.bundles.coroutine)
     implementation(libs.bundles.compose)
     debugImplementation(libs.compose.uitooling)
 
