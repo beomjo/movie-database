@@ -16,7 +16,15 @@ android {
 }
 
 dependencies {
-    implementation(projects.app)
+    implementation(projects.domain)
+    implementation(projects.data)
+    implementation(projects.common)
+    implementation(projects.navigation)
+
+    implementation(libs.bundles.android)
+    implementation(libs.bundles.coroutine)
+    implementation(libs.bundles.compose)
+    debugImplementation(libs.compose.uitooling)
 
     implementation(libs.dagger.hilt)
     kapt(libs.dagger.hiltApt)

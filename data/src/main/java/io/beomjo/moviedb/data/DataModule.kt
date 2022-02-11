@@ -13,6 +13,12 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 internal object DataModule {
 
+    @Provides
+    @ApiKey
+    fun provideApiKey(): String {
+        return BuildConfig.REST_KEY
+    }
+
     @Singleton
     @Provides
     fun provideRetrofitInstance(
