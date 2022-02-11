@@ -9,19 +9,22 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import io.beomjo.moviedb.navigation.Route
+import io.beomjo.moviedb.navigation.Tab
 import io.beomjo.moviedb.navigation.findStartDestination
 
 @Composable
-fun BottomNavigation(navController: NavController) {
+fun BottomNavigation(
+    navController: NavController,
+    defaultTabPath: String,
+) {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
-    val currentRoute = navBackStackEntry?.destination?.route ?: Route.default
-    val tabs = Route.values().filter { it.isTabRoute }.toList()
+    val currentRoute = navBackStackEntry?.destination?.route ?: defaultTabPath
+    val tabs = Tab.values().toList()
     BottomNavigation {
         tabs.forEach { tab ->
             BottomNavigationItem(
                 icon = {
-//                    Image(
+//                    Image(R
 //                        painterResource(tab.icon),
 //                        contentDescription = "",
 //                    )
@@ -30,18 +33,16 @@ fun BottomNavigation(navController: NavController) {
                 selectedContentColor = Color.White,
                 unselectedContentColor = Color.White.copy(0.4f),
                 alwaysShowLabel = true,
-                selected = currentRoute == tab.path,
+                selected = currentRoute.contains(tab.path),
                 onClick = {
-                    if (tab.path != currentRoute) {
-                        navController.navigate(tab.path) {
-                            launchSingleTop = true
-                            restoreState = true
-                            // Pop up backstack to the first destination and save state. This makes going back
-                            // to the start destination when pressing back in any other bottom tab.
-                            val startDestination = findStartDestination(navController.graph)
-                            popUpTo(startDestination.id) {
-                                saveState = true
-                            }
+                    navController.navigate(tab.path) {
+                        launchSingleTop = true
+                        restoreState = true
+                        // Pop up backstack to the first destination and save state. This makes going back
+                        // to the start destination when pressing back in any other bottom tab.
+                        val startDestination = findStartDestination(navController.graph)
+                        popUpTo(startDestination.id) {
+                            saveState = true
                         }
                     }
                 }
